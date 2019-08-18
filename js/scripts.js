@@ -118,18 +118,19 @@ function validation() {
     //}
     if (gen[0].checked === false && gen[1].checked === false) {
         alert('select gender');
+        return false;
            
         } else {
             for (i = 0; i < gen.length; i++) {
                 if (gen[i].checked)
-                alert(gen[i].value);
-                    //var gend= gen[i].value;
+                //alert(gen[i].value);
+                    var gend= gen[i].value;
                     //return gend;
                     }
                 
                 }           
   
-
+                
     // if(isNaN(date.value) ||date.value <1 || date.value >31 ||date.value === null || date.value === ""){
     //     //alert("Invalid date format");
     // document.getElementById('one').innerHTML = "invalid day";
