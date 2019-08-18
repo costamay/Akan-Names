@@ -80,37 +80,39 @@ function validation() {
         return false;
     }
     var ListofDays = [31,28,31,30,31,30,31,31,30,31,30,31];
-    
-
-    if (month===1 || month>2){
+    if(isNaN(month) || month=== "" || month ===null || month <1 || month>12){
+        alert("invalid month");
+    }
+     if(month===1 || month>2){
   if (date>ListofDays[month-1])
   {
   alert('Invalid date format!');
   return false;
   }
   }
-  if (month===2){
+  if(month===2){
   var lyear = false;
   if ( (!(year % 4) && year % 100) || !(year % 400)) 
   {
+      
   lyear = true;
   }
-  if ((lyear==false) && (dd>=29))
+  if ((lyear==false) && (date>=29))
   {
   alert('Invalid date format!');
   return false;
   }
-  if ((lyear==true) && (dd>29))
+  if ((lyear==true) && (date>29))
   {
   alert('Invalid date format!');
   return false;
   }
   }
-//   }
+  
 //   else
 //   {
 //   alert("Invalid date format!");
-//   document.form1.text1.focus();
+  
 //   return false;
 //   }
     // if(isNaN(date.value) ||date.value <1 || date.value >31 ||date.value === null || date.value === ""){
