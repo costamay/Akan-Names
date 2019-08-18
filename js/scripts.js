@@ -75,8 +75,44 @@ function validation() {
     var gen = document.getElementsByName("gd");
     var currentDate = new Date();
     var currentYear = currentDate.getFullYear();
+    if(isNaN(date) || date === null || date === "" || date < 1 || date > 31){
+        alert("invalid date");
+        return false;
+    }
     var ListofDays = [31,28,31,30,31,30,31,31,30,31,30,31];
     
+
+    if (month===1 || month>2){
+  if (date>ListofDays[month-1])
+  {
+  alert('Invalid date format!');
+  return false;
+  }
+  }
+  if (month===2){
+  var lyear = false;
+  if ( (!(year % 4) && year % 100) || !(year % 400)) 
+  {
+  lyear = true;
+  }
+  if ((lyear==false) && (dd>=29))
+  {
+  alert('Invalid date format!');
+  return false;
+  }
+  if ((lyear==true) && (dd>29))
+  {
+  alert('Invalid date format!');
+  return false;
+  }
+  }
+//   }
+//   else
+//   {
+//   alert("Invalid date format!");
+//   document.form1.text1.focus();
+//   return false;
+//   }
     // if(isNaN(date.value) ||date.value <1 || date.value >31 ||date.value === null || date.value === ""){
     //     //alert("Invalid date format");
     // document.getElementById('one').innerHTML = "invalid day";
@@ -122,7 +158,7 @@ function validation() {
 //     updateYear = myDetails.newYear;
 //     updateGender = myDetails.newGender;
 //     console.log(updateDate);
-}
+//}
  function realValues(){
      var a= validation();
      var day = parseInt(a.myDate);
