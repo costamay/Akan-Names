@@ -1,4 +1,4 @@
-const male = {
+var male = {
     Sunday: 'Kwasi',
     Monday: 'Kwadwo',
     Tuesday: 'Kwabena',
@@ -8,7 +8,7 @@ const male = {
     Saturday: 'Kwame',
 };
 
-const female = {
+var female = {
     Sunday: 'Akosua',
     Monday: 'Adwoa',
     Tuesday: 'Abenaa',
@@ -119,14 +119,14 @@ function validation() {
     if (gen[0].checked === false && gen[1].checked === false) {
         alert('select gender');
         return false;
-           
-        } else {
-            for (i = 0; i < gen.length; i++) {
-                if (gen[i].checked)
+     } else {
+         for (i = 0; i < gen.length; i++) {
+             if (gen[i].checked)
                 //alert(gen[i].value);
                     var gend= gen[i].value;
                     //return gend;
                     }
+                    
                 
                 }           
   
@@ -166,8 +166,16 @@ function validation() {
     //             var gend= gen[i].value
     //             return gend;
     //             }
+    
 
 }
+var userInputs ={
+    userDate: date,
+    userMonth: month,
+    userYear: year,
+    userGender: gen.value
+};
+console.log(userInputs);
 
 // function calDay(){
 //     var userInputs = validation();
@@ -177,7 +185,7 @@ function validation() {
 //     updateGender = myDetails.newGender;
 //     console.log(updateDate);
 //}
- function realValues(){
+ function execute(){
      var a= validation();
      var day = parseInt(a.myDate);
      var month =parseInt(a.myMonth);
