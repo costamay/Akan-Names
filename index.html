@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <title>Date Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <h1>WElCOME TO AKAN NAMES SITE</h1>
+            <h2>Feel free to enter date of birth and select your gender to reveal your Akan name</h2>
+        </div>
+        <div class="frm">
+            <form action="" id="myForm" class="form">
+                <fieldset>
+                        <legend>Enter Your Info...</legend>
+                       <lable>Enter Date of Birth:</lable>
+                        <input type="text" id="d"  class="in" maxlength="2" placeholder="DD"  autofocus autocomplete="on"  required>
+                        <div><h4 id="one"></h4></div><br><br>
+                        <lable>Enter Month:</lable>
+                        <input type="text" id="m"  class="in" maxlength="2" placeholder="MM" autocomplete="on" required>
+                        <div><h4 id="two"></h4></div><br><br>
+                        <lable>Enter Year of Birth:</lable>
+                        <input type="text" id="yy"  maxlength="4" class="in" placeholder="YYYY" autocomplete="on" required>
+                        <div><h4 id="three"></h4></div><br><br>
+                        <h1>Select gender</h1>
+                        <div><h4 id="four"></h4></div>
+                        <lable>Male:
+                                
+                        <input type="radio" class="g" name="gd" value="male" required></lable>
+                        <lable>Female:
+                            <input type="radio" class="g" name="gd" value="female" required></lable>
+                            
+                        
+                </fieldset>
+                
+            </form>
+        </div>
+        <div class="sub">
+            <button type="button" sub-btn  onclick="validation()">Submit</button>
+            <button type="button"  onclick="ClearFields()">Reset</button>
+        </div>
+        <div class="output">
+            <h1>And your Akan name is:</h>
+            <span><h1 id="ans"></h1></span>
+
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
