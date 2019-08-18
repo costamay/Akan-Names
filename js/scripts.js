@@ -82,6 +82,7 @@ function validation() {
     var ListofDays = [31,28,31,30,31,30,31,31,30,31,30,31];
     if(isNaN(month) || month=== "" || month ===null || month <1 || month>12){
         alert("invalid month");
+       
     }
      if(month===1 || month>2){
   if (date>ListofDays[month-1])
@@ -108,31 +109,27 @@ function validation() {
   return false;
   }
   }
-  if(isNaN(year.value) || year.value === "" ||year.value === null || year.value <1900 || year.value > currentYear){
+  if(isNaN(year) || year === "" ||year === null || year <1900 || year > currentYear){
         alert("invalid year");
-        
-    }else{
-        //alert("select gender")
-        return year;
-    }
+        return false;
+ }//else{
+    //     //alert("select gender")
+    //     return year;
+    //}
     if (gen[0].checked === false && gen[1].checked === false) {
-           // alert('get out of here');
-            document.getElementById('four').innerHTML = "select gender";
-        document.getElementById('four').style.color = "red"
+        alert('select gender');
+           
         } else {
             for (i = 0; i < gen.length; i++) {
                 if (gen[i].checked)
-                    var gend= gen[i].value
-                    return gend;
+                alert(gen[i].value);
+                    //var gend= gen[i].value;
+                    //return gend;
                     }
-        
+                
+                }           
   
-//   else
-//   {
-//   alert("Invalid date format!");
-  
-//   return false;
-//   }
+
     // if(isNaN(date.value) ||date.value <1 || date.value >31 ||date.value === null || date.value === ""){
     //     //alert("Invalid date format");
     // document.getElementById('one').innerHTML = "invalid day";
