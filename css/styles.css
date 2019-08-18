@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Carter+One|Oleo+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Carter+One|Chewy|Oleo+Script&display=swap');
+body{
+     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("../images/best.jpeg");
+     background-size: cover;
+}
+
+.head{
+    text-align: center;
+    color:orange;
+    font-family: 'Carter One', cursive;
+}
+.form{
+    font-family: 'Oleo Script', cursive;
+    color: white;
+}
+
+.output{
+    font-family: 'Chewy', cursive;
+    color: orange;
+}
+lable{
+    display:inline-block;
+    *display: inline;     /* for IE7*/
+    zoom:1;              /* for IE7*/
+    
+    padding-top: 5px;
+    text-align: right;
+    width: 250px;
+    font-size: 30px;
+}
+input{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display:inline-block; 
+    *display: inline;     /* for IE7*/
+    zoom:1;              /* for IE7*/
+    vertical-align:middle;
+    margin-left:20px
+    
+}
+.form input[type="text"]{
+    border-radius: 25px;
+    text-align: center;
+    color: black;
+}
+.form input[type="text"]::placeholder{
+    
+    
+}
+button{
+    color: white;
+    background-color: green;
+    width: 200px;
+    border-radius: 25px;
+}
+.sub{
+    text-align: center;
+    margin-top: 20px;
+    
+}
+.frm{
+    text-align: center;
+}
