@@ -125,6 +125,13 @@ function validation() {
                 //alert(gen[i].value);
                     var gend= gen[i].value;
                     //return gend;
+                    var userInputs ={
+                        userDate: date,
+                        userMonth: month,
+                        userYear: year,
+                        userGender: gend
+                    };
+                    console.log(userInputs);
                     }
                     
                 
@@ -169,13 +176,7 @@ function validation() {
     
 
 }
-var userInputs ={
-    userDate: date,
-    userMonth: month,
-    userYear: year,
-    userGender: gen.value
-};
-console.log(userInputs);
+
 
 // function calDay(){
 //     var userInputs = validation();
