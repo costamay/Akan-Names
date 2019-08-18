@@ -188,11 +188,13 @@ function validation() {
 //}
  function execute(){
      var a= validation();
-     var day = parseInt(a.myDate);
-     var month =parseInt(a.myMonth);
-     var year = a.myYear;
-     var yy = parseInt(year.slice(2,4));
-     var cc =parseInt(year.slice(0,2));
-//var myDate = 
+     var DD = parseInt(a.userDate);
+     var MM =parseInt(a.userMonth);
+     var newYear = a.userYear;
+     var YY = parseInt(year.slice(2,4));
+     var CC =parseInt(year.slice(0,2));
+     var newGende = a.userGender;
+var weekDate = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
+console.log(weekDate);
  }
 
