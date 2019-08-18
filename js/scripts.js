@@ -108,6 +108,24 @@ function validation() {
   return false;
   }
   }
+  if(isNaN(year.value) || year.value === "" ||year.value === null || year.value <1900 || year.value > currentYear){
+        alert("invalid year");
+        
+    }else{
+        //alert("select gender")
+        return year;
+    }
+    if (gen[0].checked === false && gen[1].checked === false) {
+           // alert('get out of here');
+            document.getElementById('four').innerHTML = "select gender";
+        document.getElementById('four').style.color = "red"
+        } else {
+            for (i = 0; i < gen.length; i++) {
+                if (gen[i].checked)
+                    var gend= gen[i].value
+                    return gend;
+                    }
+        
   
 //   else
 //   {
