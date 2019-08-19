@@ -1,4 +1,4 @@
-var male = {
+var maleNames = {
     Sunday: 'Kwasi',
     Monday: 'Kwadwo',
     Tuesday: 'Kwabena',
@@ -8,7 +8,7 @@ var male = {
     Saturday: 'Kwame',
 };
 
-var female = {
+var femaleNames = {
     Sunday: 'Akosua',
     Monday: 'Adwoa',
     Tuesday: 'Abenaa',
@@ -17,15 +17,7 @@ var female = {
     Friday: 'Afua',
     Saturday: 'Ama',
 };
-const gender = [male, female];
-// // console.log(gender[1]);
-// console.log(Object.keys(gender[0]));
-// console.log(gender.prototype.keys());
-// function validation (){
-// // const inputText = document.querySelector('[bd]')
-// //     var dateformat = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
 
-// }
 
 function ClearFields() {
 
@@ -177,15 +169,6 @@ function validation() {
 
 }
 
-
-// function calDay(){
-//     var userInputs = validation();
-//     updateDate = myDetails.newDate
-//     updateMonth = myDetails.newMonth;
-//     updateYear = myDetails.newYear;
-//     updateGender = myDetails.newGender;
-//     console.log(updateDate);
-//}
  function execute(){
      var a = validation();
      var DD = parseInt(a.userDate);
@@ -213,8 +196,21 @@ var y = newYear - a;
          'Thursday', 'Friday', 'Saturday');
  
 
-var realDay = daysofaweek[dayOfTheWeek];
-return realDay;
-console.log(real)
+var realDay = daysOfaweek[dayOfTheWeek];
+// return realDay;
+
+if (newGender === "male") {
+    //var myAkanObj = maleAkaname;
+
+    for (var name in maleNames) {
+        if (maleNames.hasOwnProperty(name)) {
+            if (name === realDay) {
+                //userAkanName = myAkanObj[akan];
+                alert("Your Akan name is "+maleNames[name]);
+            }
+        }
+    }
+
  }
+}
 
