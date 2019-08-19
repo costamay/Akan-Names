@@ -213,8 +213,8 @@ var y = newYear - a;
          'Thursday', 'Friday', 'Saturday');
  
 
-var realDay = daysofaweek[dayOfWeek];
+var realDay = daysofaweek[dayOfTheWeek];
 return realDay;
-consol
+console.log(real)
  }
 
