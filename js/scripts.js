@@ -33,31 +33,6 @@ function ClearFields() {
      document.getElementById("ans").style.display = "none";
 }
 
-// function validation (){
-//     var
-//     var month = document.getElementsByName('m');
-
-//     var reg = /^(0?[1-9]|1[012])$/;
-//     if(month.value.test(reg)){
-//         alert('valid month');
-//     }else{
-//         alert('invalid month')
-//     }
-// const validation =()=>{
-//     const day = document.getElementById('d');
-//     const month = document.getElementById('m');
-//     const year = document.getElementById('yy');
-//     const sex = document.getElementsByName('gd');
-
-//     if(day.value === "" && month.value === "" ){
-//         alert("fill all fields")
-//     }else{
-//         alert('lets go on');
-//     }
-
-
-
-// }
 
 function validation() {
     var date = document.getElementById("d").value;
@@ -120,7 +95,7 @@ function validation() {
      } else {
          for (i = 0; i < gen.length; i++) {
              if (gen[i].checked)
-                //alert(gen[i].value);
+                alert(gen[i].value);
                     var gend= gen[i].value;
                     //return gend;
                     var userInputs ={
@@ -129,6 +104,7 @@ function validation() {
                         userYear: year,
                         userGender: gend
                     };
+                    console.log(userInputs.gend)
                     return userInputs;
                     }
                     
@@ -172,6 +148,8 @@ for (var name in maleNames) {
         if (maleNames.hasOwnProperty(name)) {
             if (name === realDay) {
                 document.getElementById('ans').innerHTML = maleNames[name];
+                document.getElementById('three').style.backgroundColor = "black";
+                document.getElementById('three').style.color = "white";
                 alert("Your Akan name is "+maleNames[name]);
             }
         }
@@ -182,6 +160,8 @@ for (var name in maleNames) {
             if (femaleNames.hasOwnProperty(name)) {
                 if (name === realDay) {
                     document.getElementById('ans').innerHTML = femaleNames[name];
+                    document.getElementById('three').style.backgroundColor = "black";
+                document.getElementById('three').style.color = "white";
                     alert("Your Akan name is "+femaleNames[name]);
                 }
             }
