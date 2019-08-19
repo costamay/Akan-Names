@@ -207,10 +207,14 @@ var a = Math.floor((14 - MM) / 12);
 var y = newYear - a;
  var m = MM + 12 * a - 2;
  var dayOfTheWeek = (DD + y + Math.floor(y / 4) - Math.floor(y / 100) +
- Math.floor(year / 400) + Math.floor((31 * m) / 12)) % 7;
- return d;
-console.log(dayOfTheWeek);
+ Math.floor(newYear / 400) + Math.floor((31 * m) / 12)) % 7;
+ console.log(dayOfTheWeek);
+ var daysOfaweek = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday',       
+         'Thursday', 'Friday', 'Saturday');
+ 
 
-
+var realDay = daysofaweek[dayOfWeek];
+return realDay;
+consol
  }
 
