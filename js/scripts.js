@@ -91,12 +91,13 @@ function validation() {
         document.getElementById('four').innerHTML = "select gender";
         document.getElementById('four').style.color = "red"
         alert('select gender');
-        return false;
+        
      } else {
          for (i = 0; i < gen.length; i++) {
-             if (gen[i].checked)
+             if (gen[i].checked){
                 alert(gen[i].value);
-                    var gend= gen[i].value;
+                    var gend = gen[i].value;
+         }
                     //return gend;
                     var userInputs ={
                         userDate: date,
@@ -104,7 +105,7 @@ function validation() {
                         userYear: year,
                         userGender: gend
                     };
-                    console.log(userInputs.gend)
+                    
                     return userInputs;
                     }
                     
@@ -124,7 +125,7 @@ function validation() {
 //var weekDate = Math.floor((((CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7);
 // var a = (14 - month) / 12
 //                                       //calculating dday of the week
-// var y = year - a                          //https://www.mindstick.com/blog/387/calculating-day-of-the-week-for-any-date-in-javascript
+// var y = year - a                          // 
 
 // var m = month + 12 * a - 2
 
@@ -135,7 +136,7 @@ var y = newYear - a;
  var m = MM + 12 * a - 2;
  var dayOfTheWeek = (DD + y + Math.floor(y / 4) - Math.floor(y / 100) +
  Math.floor(newYear / 400) + Math.floor((31 * m) / 12)) % 7;
- console.log(dayOfTheWeek);
+ 
  var daysOfaweek = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday',       
          'Thursday', 'Friday', 'Saturday');
  
@@ -143,7 +144,7 @@ var y = newYear - a;
 var realDay = daysOfaweek[dayOfTheWeek];
 
 
-if (newGender === "male") {
+if (newGender ==="male") {
 for (var name in maleNames) {
         if (maleNames.hasOwnProperty(name)) {
             if (name === realDay) {
@@ -155,8 +156,8 @@ for (var name in maleNames) {
         }
     }
 
- }else if(newGender === "female") {
-    for (var name in maleNames) {
+ }else {
+    for (var name in femaleNames) {
             if (femaleNames.hasOwnProperty(name)) {
                 if (name === realDay) {
                     document.getElementById('ans').innerHTML = femaleNames[name];
