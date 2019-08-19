@@ -68,13 +68,18 @@ function validation() {
     var currentDate = new Date();
     var currentYear = currentDate.getFullYear();
     if(isNaN(date) || date === null || date === "" || date < 1 || date > 31){
+       
+        document.getElementById('one').innerHTML = "invalid day";
+        document.getElementById('one').style.color = "red"
         alert("invalid date");
         return false;
     }
     var ListofDays = [31,28,31,30,31,30,31,31,30,31,30,31];
     if(isNaN(month) || month=== "" || month ===null || month <1 || month>12){
+        document.getElementById('two').innerHTML = "invalid month";
+        document.getElementById('two').style.color = "red"
         alert("invalid month");
-       
+       return false;
     }
      if(month===1 || month>2){
   if (date>ListofDays[month-1])
@@ -102,13 +107,14 @@ function validation() {
   }
   }
   if(isNaN(year) || year === "" ||year === null || year <1900 || year > currentYear){
+    document.getElementById('three').innerHTML = "invalid year";
+    document.getElementById('three').style.color = "red"
         alert("invalid year");
         return false;
- }//else{
-    //     //alert("select gender")
-    //     return year;
-    //}
+ }
     if (gen[0].checked === false && gen[1].checked === false) {
+        document.getElementById('four').innerHTML = "select gender";
+        document.getElementById('four').style.color = "red"
         alert('select gender');
         return false;
      } else {
@@ -128,44 +134,6 @@ function validation() {
                     
                 
                 }           
-  
-                
-    // if(isNaN(date.value) ||date.value <1 || date.value >31 ||date.value === null || date.value === ""){
-    //     //alert("Invalid date format");
-    // document.getElementById('one').innerHTML = "invalid day";
-    // document.getElementById('one').style.color = "red"
-    // }else{
-    //     //alert("continue");
-    //     return date;
-    // }
-    // if (isNaN(month.value) || month.value < 1 || month.value > 12 || month.value === "" || month.value == null) {
-    //     //alert('invalid month');
-    //     document.getElementById('two').innerHTML = "invalid month";
-    // document.getElementById('two').style.color = "red"
-    // } else {
-    //     //alert('you ok');
-    //     return month;
-    // }
-    // if(isNaN(year.value) || year.value === "" ||year.value === null || year.value <1900 || year.value > currentYear){
-    //     //alert("invalid year");
-    //     document.getElementById('three').innerHTML = "invalid year";
-    // document.getElementById('three').style.color = "red"
-    // }else{
-    //     //alert("select gender")
-    //     return year;
-        
-    // }
-    // if (gen[0].checked === false && gen[1].checked === false) {
-    //    // alert('get out of here');
-    //     document.getElementById('four').innerHTML = "select gender";
-    // document.getElementById('four').style.color = "red"
-    // } else {
-    //     for (i = 0; i < gen.length; i++) {
-    //         if (gen[i].checked)
-    //             var gend= gen[i].value
-    //             return gend;
-    //             }
-    
 
 }
 
@@ -197,20 +165,28 @@ var y = newYear - a;
  
 
 var realDay = daysOfaweek[dayOfTheWeek];
-// return realDay;
+
 
 if (newGender === "male") {
-    //var myAkanObj = maleAkaname;
-
-    for (var name in maleNames) {
+for (var name in maleNames) {
         if (maleNames.hasOwnProperty(name)) {
             if (name === realDay) {
-                //userAkanName = myAkanObj[akan];
+                document.getElementById('ans').innerHTML = maleNames[name];
                 alert("Your Akan name is "+maleNames[name]);
             }
         }
     }
 
- }
+ }else if(newGender === "female") {
+    for (var name in maleNames) {
+            if (femaleNames.hasOwnProperty(name)) {
+                if (name === realDay) {
+                    document.getElementById('ans').innerHTML = femaleNames[name];
+                    alert("Your Akan name is "+femaleNames[name]);
+                }
+            }
+        }
+    
+     }
 }
 
